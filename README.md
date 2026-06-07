@@ -40,3 +40,13 @@ dotnet run --urls http://localhost:5147
 La cadena de conexion esta en `appsettings.json` y usa SQLite: `Data Source=agenda_viva_eventos.db`.
 Al ejecutar el sistema, la base se crea automaticamente con migraciones si todavia no existe.
 
+## Datos de ejemplo
+
+Al iniciar por primera vez, el sistema carga datos de prueba automaticamente:
+
+- 5 lugares
+- 5 organizadores
+- 10 clientes
+- 6 eventos
+- 30 reservas de ejemplo
+
