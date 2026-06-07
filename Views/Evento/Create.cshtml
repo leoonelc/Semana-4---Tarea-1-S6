@@ -1,0 +1,47 @@
+@model SistemaGestionEventos.Models.EventoModel
+
+@{
+    ViewData["Title"] = "Registrar Evento";
+}
+
+<section class="crud-shell">
+    <div class="page-heading">
+        <h1>Registrar Evento</h1>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver</a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Titulo" class="form-label fw-semibold"></label>
+                        <input asp-for="Titulo" class="form-control" />
+                        <span asp-validation-for="Titulo" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="FechaEvento" class="form-label fw-semibold"></label>
+                        <input asp-for="FechaEvento" type="date" class="form-control" />
+                        <span asp-validation-for="FechaEvento" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="LugarId" class="form-label fw-semibold"></label>
+                        <select asp-for="LugarId" class="form-select" asp-items="ViewBag.LugarId"></select>
+                        <span asp-validation-for="LugarId" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="OrganizadorId" class="form-label fw-semibold"></label>
+                        <select asp-for="OrganizadorId" class="form-select" asp-items="ViewBag.OrganizadorId"></select>
+                        <span asp-validation-for="OrganizadorId" class="text-danger"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

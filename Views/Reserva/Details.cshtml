@@ -1,0 +1,30 @@
+@model SistemaGestionEventos.Models.ReservaModel
+
+@{
+    ViewData["Title"] = "Detalle de Reserva";
+}
+
+<section class="crud-shell">
+    <div class="page-heading">
+        <h1>Detalle de Reserva</h1>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver</a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <dl class="row mb-0">
+            <dt class="col-sm-4">FechaReserva</dt>
+            <dd class="col-sm-8">@Model.FechaReserva</dd>
+            <dt class="col-sm-4">Estado</dt>
+            <dd class="col-sm-8">@Model.Estado</dd>
+            <dt class="col-sm-4">Cliente</dt>
+            <dd class="col-sm-8">@Model.Cliente?.Nombre</dd>
+            <dt class="col-sm-4">Evento</dt>
+            <dd class="col-sm-8">@Model.Evento?.Titulo</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="mt-3 d-flex gap-2">
+        <a asp-action="Edit" asp-route-id="@Model.ReservaId" class="btn btn-primary">Editar</a>
+    </div>
+</section>

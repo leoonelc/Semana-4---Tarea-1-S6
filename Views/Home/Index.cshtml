@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<section class="home-hero">
+    <img src="~/img/como-organizar-evento-portada.jpg"
+         alt="Evento organizado"
+         onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');" />
+    <div class="home-hero__overlay">
+        <p class="eyebrow">Tarea realizada por NOMBRE COMPLETO DEL ESTUDIANTE</p>
+        <h1>Agenda Viva Eventos</h1>
+        <p>Proyecto académico creado con ASP.NET Core MVC, scaffolding, Entity Framework y migraciones.</p>
+        <div class="hero-actions">
+            <a asp-controller="Reserva" asp-action="Create" class="btn btn-primary">Nueva reserva</a>
+            <a asp-controller="Evento" asp-action="Index" class="btn btn-light">Ver eventos</a>
+        </div>
+    </div>
+</section>

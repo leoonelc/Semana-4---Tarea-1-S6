@@ -1,0 +1,30 @@
+@model SistemaGestionEventos.Models.EventoModel
+
+@{
+    ViewData["Title"] = "Eliminar Evento";
+}
+
+<section class="crud-shell">
+    <div class="page-heading">
+        <h1>Eliminar Evento</h1>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver</a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <dl class="row mb-0">
+            <dt class="col-sm-4">Titulo</dt>
+            <dd class="col-sm-8">@Model.Titulo</dd>
+            <dt class="col-sm-4">FechaEvento</dt>
+            <dd class="col-sm-8">@Model.FechaEvento</dd>
+            <dt class="col-sm-4">Lugar</dt>
+            <dd class="col-sm-8">@Model.Lugar?.Nombre</dd>
+            <dt class="col-sm-4">Organizador</dt>
+            <dd class="col-sm-8">@Model.Organizador?.Nombre</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="mt-3 d-flex gap-2">
+        <form asp-action="Delete"><input type="hidden" asp-for="EventoId" /><button type="submit" class="btn btn-danger">Eliminar</button></form>
+    </div>
+</section>
