@@ -16,22 +16,22 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label asp-for="FechaReserva" class="form-label fw-semibold"></label>
+                        <label asp-for="FechaReserva" class="form-label fw-semibold">Fecha de reserva</label>
                         <input asp-for="FechaReserva" type="date" class="form-control" />
                         <span asp-validation-for="FechaReserva" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label asp-for="Estado" class="form-label fw-semibold"></label>
+                        <label asp-for="Estado" class="form-label fw-semibold">Estado</label>
                         <select asp-for="Estado" class="form-select"><option>Pendiente</option><option>Confirmada</option><option>Cancelada</option></select>
                         <span asp-validation-for="Estado" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label asp-for="ClienteId" class="form-label fw-semibold"></label>
+                        <label asp-for="ClienteId" class="form-label fw-semibold">Cliente</label>
                         <select asp-for="ClienteId" class="form-select" asp-items="ViewBag.ClienteId"></select>
                         <span asp-validation-for="ClienteId" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label asp-for="EventoId" class="form-label fw-semibold"></label>
+                        <label asp-for="EventoId" class="form-label fw-semibold">Evento</label>
                         <select asp-for="EventoId" class="form-select" asp-items="ViewBag.EventoId"></select>
                         <span asp-validation-for="EventoId" class="text-danger"></span>
                     </div>
